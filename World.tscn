@@ -1,0 +1,79 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+
+[node name="World" type="Node2D"]
+position = Vector2( 7, 8 )
+
+[node name="Block" parent="." instance=ExtResource( 1 )]
+position = Vector2( 66, 110 )
+
+[node name="Block2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 84, 110 )
+
+[node name="Block3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 102, 110 )
+
+[node name="Block4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 211, 68 )
+
+[node name="Block5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 120, 110 )
+
+[node name="Block6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 193, 68 )
+
+[node name="Block7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 193, 86 )
+
+[node name="Block8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 157, 104 )
+
+[node name="Block9" parent="." instance=ExtResource( 1 )]
+position = Vector2( 175, 104 )
+
+[node name="Block11" parent="." instance=ExtResource( 1 )]
+position = Vector2( 247, 9 )
+
+[node name="Block12" parent="." instance=ExtResource( 1 )]
+position = Vector2( 229, 50 )
+
+[node name="Block10" parent="." instance=ExtResource( 1 )]
+position = Vector2( 175, 68 )
+
+[node name="Block13" parent="." instance=ExtResource( 1 )]
+position = Vector2( 254, 112 )
+
+[node name="Block17" parent="." instance=ExtResource( 1 )]
+position = Vector2( 254, 112 )
+
+[node name="Block18" parent="." instance=ExtResource( 1 )]
+position = Vector2( 21, 136 )
+
+[node name="Block23" parent="." instance=ExtResource( 1 )]
+position = Vector2( 166, 147 )
+
+[node name="Block19" parent="." instance=ExtResource( 1 )]
+position = Vector2( 38, 163 )
+
+[node name="Block25" parent="." instance=ExtResource( 1 )]
+position = Vector2( 84, 164 )
+
+[node name="Block21" parent="." instance=ExtResource( 1 )]
+position = Vector2( 138, 161 )
+
+[node name="Block22" parent="." instance=ExtResource( 1 )]
+position = Vector2( 197, 148 )
+
+[node name="Block14" parent="." instance=ExtResource( 1 )]
+position = Vector2( 302, 84 )
+
+[node name="Block15" parent="." instance=ExtResource( 1 )]
+position = Vector2( 286, 47 )
+
+[node name="Block16" parent="." instance=ExtResource( 1 )]
+position = Vector2( 267, 28 )
+
+[node name="Player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 66, 109 )
