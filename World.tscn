@@ -1,79 +1,52 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Block.tscn" type="PackedScene" id=1]
+[ext_resource path="res://TileMap.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Spikes.tscn" type="PackedScene" id=3]
+[ext_resource path="res://World.gd" type="Script" id=4]
+[ext_resource path="res://WalkingEnemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Ladder.tscn" type="PackedScene" id=6]
 
 [node name="World" type="Node2D"]
-position = Vector2( 7, 8 )
+script = ExtResource( 4 )
 
-[node name="Block" parent="." instance=ExtResource( 1 )]
-position = Vector2( 66, 110 )
-
-[node name="Block2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 84, 110 )
-
-[node name="Block3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 102, 110 )
-
-[node name="Block4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 211, 68 )
-
-[node name="Block5" parent="." instance=ExtResource( 1 )]
-position = Vector2( 120, 110 )
-
-[node name="Block6" parent="." instance=ExtResource( 1 )]
-position = Vector2( 193, 68 )
-
-[node name="Block7" parent="." instance=ExtResource( 1 )]
-position = Vector2( 193, 86 )
-
-[node name="Block8" parent="." instance=ExtResource( 1 )]
-position = Vector2( 157, 104 )
-
-[node name="Block9" parent="." instance=ExtResource( 1 )]
-position = Vector2( 175, 104 )
-
-[node name="Block11" parent="." instance=ExtResource( 1 )]
-position = Vector2( 247, 9 )
-
-[node name="Block12" parent="." instance=ExtResource( 1 )]
-position = Vector2( 229, 50 )
-
-[node name="Block10" parent="." instance=ExtResource( 1 )]
-position = Vector2( 175, 68 )
-
-[node name="Block13" parent="." instance=ExtResource( 1 )]
-position = Vector2( 254, 112 )
-
-[node name="Block17" parent="." instance=ExtResource( 1 )]
-position = Vector2( 254, 112 )
-
-[node name="Block18" parent="." instance=ExtResource( 1 )]
-position = Vector2( 21, 136 )
-
-[node name="Block23" parent="." instance=ExtResource( 1 )]
-position = Vector2( 166, 147 )
-
-[node name="Block19" parent="." instance=ExtResource( 1 )]
-position = Vector2( 38, 163 )
-
-[node name="Block25" parent="." instance=ExtResource( 1 )]
-position = Vector2( 84, 164 )
-
-[node name="Block21" parent="." instance=ExtResource( 1 )]
-position = Vector2( 138, 161 )
-
-[node name="Block22" parent="." instance=ExtResource( 1 )]
-position = Vector2( 197, 148 )
-
-[node name="Block14" parent="." instance=ExtResource( 1 )]
-position = Vector2( 302, 84 )
-
-[node name="Block15" parent="." instance=ExtResource( 1 )]
-position = Vector2( 286, 47 )
-
-[node name="Block16" parent="." instance=ExtResource( 1 )]
-position = Vector2( 267, 28 )
+[node name="TileMap" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1, 0 )
+tile_data = PoolIntArray( -65525, 1, 65537, -65524, 1, 65538, -65523, 1, 65538, -65522, 1, 65538, -65521, 1, 65538, -65520, 1, 65539, 11, 1, 458753, 12, 1, 458754, 13, 1, 458754, 14, 1, 458754, 15, 1, 5, 16, 1, 65540, 17, 1, 65539, 131071, 1, 65537, 65536, 1, 65539, 65551, 1, 458753, 65552, 1, 5, 65553, 1, 65540, 65554, 1, 65539, 196607, 1, 393217, 131072, 1, 65540, 131073, 1, 65539, 131088, 1, 458753, 131089, 1, 458754, 131090, 1, 458755, 262143, 1, 458753, 196608, 1, 5, 196609, 1, 65540, 196610, 1, 65538, 196611, 1, 65539, 262144, 1, 458753, 262145, 1, 458754, 262146, 1, 5, 262147, 1, 65540, 262148, 1, 65539, 327682, 1, 458753, 327683, 1, 5, 327684, 1, 65540, 327685, 1, 65539, 327692, 1, 65537, 327693, 1, 65539, 327697, 1, 65537, 327698, 1, 65539, 327702, 1, 65537, 327703, 1, 65538, 327704, 1, 65538, 327705, 1, 65538, 327706, 1, 65539, 393219, 1, 458753, 393220, 1, 5, 393221, 1, 65540, 393222, 1, 65539, 393227, 1, 65537, 393228, 1, 65541, 393229, 1, 65540, 393230, 1, 65538, 393231, 1, 65538, 393232, 1, 65538, 393233, 1, 65541, 393234, 1, 65540, 393235, 1, 65538, 393236, 1, 65538, 393237, 1, 65538, 393238, 1, 65541, 393239, 1, 4, 393240, 1, 458754, 393241, 1, 458754, 393242, 1, 458755, 458756, 1, 458753, 458757, 1, 5, 458758, 1, 65540, 458759, 1, 65538, 458760, 1, 65538, 458761, 1, 65538, 458762, 1, 65538, 458763, 1, 65541, 458764, 1, 393218, 458765, 1, 393218, 458766, 1, 4, 458767, 1, 458754, 458768, 1, 458754, 458769, 1, 458754, 458770, 1, 458754, 458771, 1, 458754, 458772, 1, 458754, 458773, 1, 458754, 458774, 1, 458754, 458775, 1, 458755, 524293, 1, 458753, 524294, 1, 458754, 524295, 1, 458754, 524296, 1, 458754, 524297, 1, 458754, 524298, 1, 458754, 524299, 1, 458754, 524300, 1, 458754, 524301, 1, 458754, 524302, 1, 458755 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 66, 109 )
+position = Vector2( 320, 70 )
+z_index = 10
+
+[node name="Spikes" parent="." instance=ExtResource( 3 )]
+position = Vector2( 135, 126 )
+
+[node name="Spikes2" parent="." instance=ExtResource( 3 )]
+position = Vector2( 153, 126 )
+
+[node name="Spikes3" parent="." instance=ExtResource( 3 )]
+position = Vector2( 171, 126 )
+
+[node name="Spikes4" parent="." instance=ExtResource( 3 )]
+position = Vector2( 189, 126 )
+
+[node name="WalkingEnemy" parent="." instance=ExtResource( 5 )]
+position = Vector2( 403, 92 )
+
+[node name="WalkingEnemy2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 257, 109 )
+
+[node name="Ladder" parent="." instance=ExtResource( 6 )]
+position = Vector2( 340, 20 )
+
+[node name="Ladder2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 340, 38 )
+
+[node name="Ladder3" parent="." instance=ExtResource( 6 )]
+position = Vector2( 340, 56 )
+
+[node name="Ladder4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 340, 74 )
+
+[node name="Ladder5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 340, 92 )
