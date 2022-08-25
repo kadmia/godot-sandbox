@@ -36,6 +36,10 @@ config/name="Hearttbeast-pixelplatform"
 run/main_scene="res://World.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SoundPlayer="*res://sounds/SoundPlayer.tscn"
+
 [display]
 
 window/size/width=320
